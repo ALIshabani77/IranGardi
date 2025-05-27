@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from attractions.models import Attraction
 
-# Create your views here.
+def attraction_list(request):
+    attractions = Attraction.objects.all()
+    return render(request, 'attractions/list.html', {'attractions': attractions})
