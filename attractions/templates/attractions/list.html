@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>جاذبه‌های گردشگری</title>
+</head>
+<body>
+    <h1>جاذبه‌های گردشگری</h1>
+    <ul>
+    {% for attr in attractions %}
+        <li>
+            {{ attr.name }} - {{ attr.city.name }}
+            (مختصات: {{ attr.latitude }}, {{ attr.longitude }})
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
